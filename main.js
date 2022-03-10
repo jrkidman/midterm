@@ -270,6 +270,7 @@ function twoSmallest(arr) {
     let smallest = arr[0];
     let secondSmallest = smallest + 1;
 
+
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] < smallest) {
             smallest = arr[i];
@@ -281,6 +282,10 @@ function twoSmallest(arr) {
             secondSmallest = arr[i];
         }
     }
+    if (arr.length < 2){
+        return undefined;
+    }
+
     let twoSmallestArr = [smallest, secondSmallest];
     return twoSmallestArr;
 }
@@ -297,5 +302,8 @@ console.log(twoSmallest([33, 41, 26, 2, 4, 17]));
 console.log("");
 console.log([46, 91, 22, 67, 61, 102, 78]);
 console.log(twoSmallest([46, 91, 22, 67, 61, 102, 78]));
+console.log("");
+console.log(twoSmallest([1]));
+
 console.log("\n////////////////////////////////////////////////////////////////////////////\n");
 

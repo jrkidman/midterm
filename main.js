@@ -179,8 +179,8 @@ Return false if otherwise
 */
 function exclamationAndQuestion(str) {
     for (let i = 0; i < str.length; i++) {
-        if (str[i] === "!" || str[i] === "?") {
-            return true
+        if (str.includes("!") && str.includes("?")){
+            return true;
         }
     }
     return false;
@@ -195,6 +195,7 @@ console.log(exclamationAndQuestion("This ! is an exclamation point and this ? is
 console.log(exclamationAndQuestion("This sentence does not have an exclamation point or a question mark."));
 console.log(exclamationAndQuestion("????!!!!"));
 console.log(exclamationAndQuestion("My name is Jill."));
+console.log(exclamationAndQuestion(""));
 console.log("\n////////////////////////////////////////////////////////////////////////////\n");
 
 
@@ -304,6 +305,8 @@ console.log([46, 91, 22, 67, 61, 102, 78]);
 console.log(twoSmallest([46, 91, 22, 67, 61, 102, 78]));
 console.log("");
 console.log(twoSmallest([1]));
+console.log("");
+console.log(twoSmallest([9,-2,4,2,1,-8]));
 
 console.log("\n////////////////////////////////////////////////////////////////////////////\n");
 
